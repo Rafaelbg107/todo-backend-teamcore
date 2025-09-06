@@ -23,8 +23,8 @@ A RESTful API for managing todos built with Spring Boot and Hexagonal Architectu
 
 ## 📋 Prerequisites
 
-- Java 24 or higher
-- Gradle (or use the included wrapper)
+- Java 24 or higher. [Java 24+ Download](https://www.oracle.com/java/technologies/downloads/)
+- Gradle 9.0.0. [Gradle Download](https://gradle.org/install/)
 
 ## 🏃‍♂️ How to Run
 
