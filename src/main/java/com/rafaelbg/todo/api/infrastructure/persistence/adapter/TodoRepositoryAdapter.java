@@ -60,7 +60,7 @@ public class TodoRepositoryAdapter implements TodoRepository {
   
   // Mapping methods
   private TodoEntity toEntity(Todo todo) {
-    return new TodoEntity(
+    TodoEntity entity = new TodoEntity(
             todo.getTitle(),
             todo.getDescription(),
             todo.isCompleted(),
@@ -68,6 +68,13 @@ public class TodoRepositoryAdapter implements TodoRepository {
             todo.getCreatedAt(),
             todo.getUpdatedAt()
     );
+    
+    // Preserve ID for updates
+    if (todo.getId() != null) {
+      entity.setId(todo.getId());
+    }
+    
+    return entity;
   }
   
   private Todo toDomain(TodoEntity entity) {
